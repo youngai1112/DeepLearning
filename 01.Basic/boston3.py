@@ -8,7 +8,7 @@
 # import part
 import sys
 import numpy as np
-import warnings
+# import warnings
 from sklearn.datasets import load_boston
 from sklearn.model_selection import train_test_split
 from tensorflow.keras.models import load_model
@@ -17,24 +17,24 @@ from tensorflow.keras.models import load_model
 # argument 정리 
 if len(sys.argv) <= 1:          # argument 미입력
     print(sys.argv[0], len(sys.argv))
-    print('사용법: python boston3.py test_dataset_index(0~50)')
+    print('사용법: python boston3.py test_dataset_index(0~50) 2> /dev/null')
     sys.exit()          
 try: 
     index = int(sys.argv[1])    # 여기서 에러가 난다면, 즉 정수를 입력한 것이 아니라면 ( 정수입력시 통과 )        
 except: 
     print('정수를 입력하세요')  # 문자열 입력시
-    print('사용법: python boston3.py test_dataset_index(0~50)')
+    print('사용법: python boston3.py test_dataset_index(0~50) 2> /dev/null')
     sys.exit()
 if index < 0 or index > 50:     # 입력받고자 하는 숫자를 넘겨서 입력했을 때
     print('0과 50사이의 정수를 입력하세요')
-    print('사용법: python boston3.py test_dataset_index(0~50)')
+    print('사용법: python boston3.py test_dataset_index(0~50) 2> /dev/null')
     sys.exit()
 
 
 # 상수값 설정 등 변수 초기화
 seed = 2022
 model_filename = 'boston.h5'
-warnings.filterwarnings('ignore')
+# warnings.filterwarnings('ignore')
 np.random.seed(seed)
 boston = load_boston()
 X_train, X_test, y_train, y_test = train_test_split(
