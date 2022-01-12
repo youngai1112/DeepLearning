@@ -22,7 +22,8 @@ X_train, X_test, y_train, y_test = train_test_split(
 )
 
 
-# 메인 모델 만들기
+# 메인 모델 만들기: 반복되는 과정이므로 학습한 모델을 save해서 모델을 가져가서 구현할 수 있다. 
+# 학습한 모델을 파일화 또는 디스크에 저장해서 필요할 때 사용하는 것이 훨씬 효율적이다
 model = Sequential([          
     Dense(30, input_dim=13, activation='relu'),
     Dense(12, activation='relu'),
