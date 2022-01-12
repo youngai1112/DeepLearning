@@ -34,7 +34,7 @@ model.fit(X_train, y_train, validation_split=0.1, epochs=500, batch_size=60, ver
 
 
 # 입력값 받기
-index = int(input('0 ~ 100 정수값을 입력하세요.> '))
+index = int(input('0 ~ 50 정수값을 입력하세요.> '))
 test = X_test[index].reshape(1,-1)
 pred_value = model.predict(test)
 
