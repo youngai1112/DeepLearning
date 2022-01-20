@@ -8,6 +8,7 @@ creditcard.csv
 model/
 OpinosisDataset1.0/
 kaggle.json
+etriaikey.txt
 
 # C extensions
 *.so
