@@ -9,6 +9,7 @@ model/
 OpinosisDataset1.0/
 kaggle.json
 etriaikey.txt
+ko.zip
 
 # C extensions
 *.so
